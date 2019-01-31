@@ -6,8 +6,14 @@
  */
 public class SimpleMerge {
     public static int[] simpleMerge(int[] arr1, int[] arr2) {
- int[]combinearr= new int [arr1.length+arr2.length];
-        for(int i = 0;i<combinearr.length;i++){
+        int[] combarray = new int[arr1.length + arr2.length];
+        int var;
+        for (int i = 0; i < combarray.length; i++) {
+           for(int i1=0;i1<arr1.length;i++){
+               for(int i2:arr2)
+           }
+            combarray[i]=var;
+        }
+        return combarray;
     }
-
 }
