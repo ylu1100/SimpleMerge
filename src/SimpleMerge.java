@@ -7,12 +7,19 @@
 public class SimpleMerge {
     public static int[] simpleMerge(int[] arr1, int[] arr2) {
         int[] combarray = new int[arr1.length + arr2.length];
-        int var;
-        for (int i = 0; i < combarray.length; i++) {
-           for(int i1=0;i1<arr1.length;i++){
-               for(int i2:arr2)
-           }
-            combarray[i]=var;
+        int ind = 0;
+        int ind1=0;
+        int ind2=0;
+        while (ind < combarray.length){
+            if((ind1<arr1.length && ind2<arr2.length)&&arr1[ind1]<arr2[ind2]){
+                combarray[ind]=arr1[ind1];
+                ind1++;
+            }
+            if((ind1<arr1.length && ind2<arr2.length)&&arr2[ind2]<arr1[ind1]){
+                combarray[ind]=arr2[ind2];
+                ind2++;
+            }
+            ind++;
         }
         return combarray;
     }
