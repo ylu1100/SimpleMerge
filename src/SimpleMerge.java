@@ -15,7 +15,6 @@ public class SimpleMerge {
                 if (ind1 >= arr1.length) {
                     combarray[ind] = arr2[ind2];
                     ind2++;
-
                 }
                 else {
                     combarray[ind] = arr1[ind1];
@@ -29,11 +28,8 @@ public class SimpleMerge {
 
                 }
                 else {
-                    if (arr2[ind2] < arr1[ind1]) {
                             combarray[ind] = arr2[ind2];
                             ind2++;
-
-                    }
                 }
             }
                         ind++;
