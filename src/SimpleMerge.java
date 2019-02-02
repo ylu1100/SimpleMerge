@@ -11,16 +11,31 @@ public class SimpleMerge {
         int ind1=0;
         int ind2=0;
         while (ind < combarray.length){
-            if((ind1<arr1.length && ind2<arr2.length)&&arr1[ind1]<arr2[ind2]){
+            if (ind1==arr1.length && ind2<arr2.length){
+                combarray[ind]=arr2[ind2];
+                ind2++;
+            }
+            if (ind2==arr2.length && ind1<arr1.length){
                 combarray[ind]=arr1[ind1];
                 ind1++;
             }
+            if((ind1<arr1.length && ind2<arr2.length)&&arr1[ind1]<arr2[ind2]){
+                combarray[ind]=arr1[ind1];
+                if(ind1!=arr1.length-1) {
+                    ind1++;
+                }
+
+            }
             if((ind1<arr1.length && ind2<arr2.length)&&arr2[ind2]<arr1[ind1]){
                 combarray[ind]=arr2[ind2];
-                ind2++;
+                if(ind2!=arr2.length-1) {
+                    ind2++;
+                }
+
             }
             ind++;
         }
         return combarray;
     }
 }
+
