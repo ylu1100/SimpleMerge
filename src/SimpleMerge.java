@@ -12,7 +12,7 @@ public class SimpleMerge {
         int ind2=0;
         while (ind < combarray.length) {
             if (ind1 == arr1.length || ind2 == arr2.length) {
-                if (ind1 >= arr1.length) {
+                if (ind1 == arr1.length) {
                     combarray[ind] = arr2[ind2];
                     ind2++;
                 }
