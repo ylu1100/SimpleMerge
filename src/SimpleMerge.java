@@ -13,22 +13,21 @@ public class SimpleMerge {
         while (ind < combarray.length) {
             if (ind1 == arr1.length || ind2 == arr2.length) {
                 if (ind1 == arr1.length) {
-                    combarray[ind] = arr2[ind2++];
+                    combarray[ind++] = arr2[ind2++];
 
                 }
                 else {
-                    combarray[ind] = arr1[ind1++];
+                    combarray[ind++] = arr1[ind1++];
                 }
             }
             else {
                 if (arr1[ind1] < arr2[ind2]) {
-                    combarray[ind] = arr1[ind1++];
+                    combarray[ind++] = arr1[ind1++];
                 }
                 else {
-                    combarray[ind] = arr2[ind2++];
+                    combarray[ind++] = arr2[ind2++];
                 }
             }
-            ind++;
         }
 
         return combarray;
